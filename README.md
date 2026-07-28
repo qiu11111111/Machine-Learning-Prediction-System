@@ -11,7 +11,7 @@ visualization. This is an educational research artifact, not a clinical tool.
 
 This project extends my undergraduate training in Data Science and Big Data
 Technology at Hubei University of Economics. My undergraduate thesis received
-an Outstanding Undergraduate Thesis Award, motivating further exploration of
+an Excellent Undergraduate Thesis recognition, motivating further exploration of
 data-driven research methods.
 
 ## Research Question
