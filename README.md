@@ -48,20 +48,40 @@ support interpretation.
 
 ## Experimental Results
 
-Results are intentionally not embedded until the pipeline has executed.
-Running `python src/evaluate.py` writes the actual values to
-`results/metrics.csv`. No numbers are fabricated in this repository.
+The following results were generated on the stratified 20% holdout set
+(61 observations) using the reproducible pipeline described above.
+
+| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| Logistic Regression | 0.8689 | 0.8125 | 0.9286 | 0.8667 | 0.9578 |
+| Random Forest | 0.9016 | 0.8438 | 0.9643 | 0.9000 | 0.9470 |
+| XGBoost | 0.9180 | 0.8710 | 0.9643 | 0.9153 | 0.9491 |
+
+XGBoost achieved the highest holdout accuracy and F1-score, while Logistic
+Regression achieved the highest ROC-AUC. Given the small dataset and single
+holdout split, these results should be interpreted as a reproducible model
+comparison rather than an estimate of clinical performance.
 
 ## Visualization
 
-The evaluation script generates:
+### ROC curve comparison
 
-- correlation heatmap
-- continuous feature distributions
-- binary target distribution
-- one confusion matrix per model
-- ROC curve comparison
-- top-15 feature importance chart for the best ROC-AUC model
+![ROC Curve](results/figures/roc_curve.png)
+
+### Feature importance
+
+![Feature Importance](results/figures/feature_importance.png)
+
+### XGBoost confusion matrix
+
+![Confusion Matrix](results/figures/confusion_matrix.png)
+
+### Feature correlation heatmap
+
+![Correlation Heatmap](results/figures/correlation_heatmap.png)
+
+Additional class-distribution, feature-distribution, and model-specific
+confusion-matrix figures are retained in `results/figures/`.
 
 ## Reproduce
 
@@ -113,5 +133,7 @@ as medical advice or as evidence of clinical deployment readiness.
 
 ## Author
 
-Hongli Qiu — B.S. in Data Science and Big Data Technology, Hubei University of
-Economics
+**Hongli Qiu**<br>
+B.S. in Data Science and Big Data Technology<br>
+Hubei University of Economics<br>
+[GitHub](https://github.com/qiu11111111)
