@@ -1,4 +1,5 @@
-# Machine Learning Prediction System
+# Machine Learning Prediction System:
+# Interpretable Predictive Modeling with Structured Health Data
 
 ## Overview
 
